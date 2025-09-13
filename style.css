@@ -490,16 +490,6 @@ h1, h2, h3, p {
   color: #333;
   text-transform: capitalize;
 }
-.footer {
-  text-align: center;
-  padding: 15px;
-  background: #111;   /* dark footer */
-  color: #fff;        /* white text */
-  font-size: 14px;
-  margin-top: 40px;   /* space from content */
-  border-top: 1px solid #333; /* subtle top line */
-}
-/* --- Remove previous html,body flex rules before adding this --- */
 
 /* Ensure body normal flow (remove the flex layout you had earlier) */
 html, body {
@@ -543,5 +533,6 @@ main, .content, .works-container {
     padding-bottom: 60px; /* match mobile footer height */
   }
 }
+
 
 
