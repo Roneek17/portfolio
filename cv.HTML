@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My CV - Ronik Pradhananga</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Sticky download button */
+    .sticky-download {
+      position: sticky;
+      top: 70px; /* stays below navbar */
+      background: #fff;
+      padding: 10px;
+      text-align: center;
+      z-index: 1000;
+      border-bottom: 2px solid #eee;
+    }
+
+    .download-btn {
+      background: linear-gradient(135deg, #ff7eb3, #ff758c);
+      color: white;
+      padding: 12px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      display: inline-block;
+    }
+
+    .download-btn:hover {
+      background: linear-gradient(135deg, #ff4e70, #ff2e63);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+    }
+  </style>
+</head>
+<body>
+  <!-- 🔹 Navbar -->
+  <header class="navbar">
+    <div class="logo" onclick="location.href='portfolio.html'">
+      <img src="mylogo.png" alt="Logo" class="logo-img">
+      <span>Ronik Pradhananga</span>
+    </div>
+    <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+
+    <nav id="navMenu">
+      <a href="portfolio.html" class="nav-button">Home</a>
+      <a href="works.html" class="nav-button">Works</a>
+      <a href="cv.html" class="nav-button">CV</a>
+      <button onclick="showContact()">Contact</button>
+    </nav>
+  </header>
+
+  <!-- 🔹 CV Section -->
+  <main class="content">
+    <section class="cv-section">
+      <h2 class="section-title"></h2>
+      <p style="text-align:center; margin-bottom:20px; color:#555;">
+        You can download my CV or view it directly below.
+      </p>
+
+      <!-- ✅ Sticky Download Button -->
+      <div class="sticky-download">
+        <a href="cv.pdf" download class="download-btn">⬇ Download CV</a>
+      </div>
+
+      <!-- CV Preview -->
+      <div class="cv-preview">
+      <iframe src="cv.pdf" width="100%" height="600px"></iframe>
+      </div>
+    </section>
+  </main>
+
+  <!-- 🔹 Contact Modal -->
+  <div class="contact-modal" id="contactModal">
+    <div class="modal-content">
+      <span onclick="hideContact()" class="close-btn">&times;</span>
+      <h3>Contact Me</h3>
+      <p>Email: ronikpradhananga@example.com</p>
+      <p>Phone: 9761807988</p>
+    </div>
+  </div>
+
+  <!-- JS for Hamburger -->
+  <script>
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navMenu = document.getElementById("navMenu");
+
+    menuToggle.addEventListener("click", () => {
+      navMenu.classList.toggle("active");
+    });
+  </script>
+</body>
+</html>

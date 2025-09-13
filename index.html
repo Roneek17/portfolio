@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="pic.png">
+</head>
+<body>
+  <header class="navbar">
+    <!-- ✅ Logo redirects to homepage -->
+    <div class="logo" onclick="location.href='portfolio.html'">
+      <img src="mylogo.png" alt="Logo" class="logo-img">
+      <span>Ronik pradhananga</span>
+    </div>
+<button class="menu-toggle" aria-label="Toggle menu">☰</button>
+
+  <nav id="navMenu">
+    <a href="portfolio.html" class="nav-button">Home</a>
+    <a href="works.html" class="nav-button">Works</a>
+    <button onclick="showContact()">Contact</button>
+  <a href="cv.html" class="nav-button">CV</a>
+</nav>
+  </header>
+
+  <main class="content full-screen">
+    <section class="about">
+      <img src="pic.png" alt="Profile Picture" class="profile-image">
+      <h2>Hello! im RONIK</h2>
+      <p> a designer who just loves turning ideas into visuals. Whether it’s logos or posters, I enjoy experimenting and bringing creative vibes to every project I work on.
+      </p>
+    </section>
+  </main>
+
+  <div class="contact-modal" id="contactModal">
+    <div class="modal-content">
+      <span onclick="hideContact()" class="close-btn">&times;</span>
+      <h3>Contact Me</h3>
+      <p>Email: ronikpradhananga@example.com</p>
+      <p>Phone: 9761807988</p>
+    </div>
+  </div>
+  
+  <script src="style.js"></script>
+</body>
+</html>

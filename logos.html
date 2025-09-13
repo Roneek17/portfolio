@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Photos & Logos - Ronik Pradhananga</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- 🔹 Navbar -->
+  <header class="navbar">
+  <!-- ✅ Logo redirects to homepage -->
+  <div class="logo" onclick="location.href='portfolio.html'">
+    <img src="mylogo.png" alt="Logo" class="logo-img">
+    <span>Ronik Pradhananga</span>
+  </div>
+
+  <!-- ✅ Hamburger button -->
+  <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+
+  <!-- ✅ Navigation menu -->
+  <nav id="navMenu">
+    <a href="portfolio.html" class="nav-button">Home</a>
+    <a href="works.html" class="nav-button">Works</a>
+    <button onclick="showContact()">Contact</button>
+  </nav>
+</header>
+
+
+  <!-- 🔹 Photos Section -->
+  <main class="content">
+    <section class="photos-section">
+      <h2 class="section-title">Logos</h2>
+
+      <!-- Photo Gallery Grid -->
+      <div class="gallery-grid">
+        <img src="1000002430.jpg" alt="Photo 1">
+        <img src="1000002988.jpg" alt="Photo 2">
+        <img src="1000004716.jpg" alt="Photo 3">
+        <img src="1000005792.jpg" alt="Photo 4">
+        <img src="1000007039.jpg" alt="Photo 5">
+        <img src="1000007042.png" alt="Photo 6">
+        <img src="1000007043.jpg" alt="Photo 7">
+        <img src="1000007044.jpg" alt="Photo 8">
+        <img src="1000007046.png" alt="Photo 9">
+         <img src="A.jpg" alt="Photo 9">
+          <img src="H.jpg" alt="Photo 9">
+           <img src="P.jpg" alt="Photo 9">
+            <img src="WW.jpg" alt="Photo 9">
+             <img src="W.jpg" alt="Photo 9">
+      </div>
+    </section>
+
+    <!-- 🔹 PDF Showcase Section -->
+    <section class="pdf-showcase">
+      <h2 class="section-title">Logo Showcase (PDFs)</h2>
+      <p style="text-align:center; margin-bottom:30px; color:#555;">
+        logo collections as PDFs preview.
+      </p>
+
+      <div class="gallery-grid">
+        <div class="work-item">
+          <a href="BPEC logo.pdf" target="_blank">
+            <img src="mylogo.png" alt="Logo PDF 1">
+            <h3>consultancy</h3>
+          </a>
+        </div>
+        <div class="work-item">
+          <a href="rara academy.pdf" target="_blank">
+            <img src="mylogo.png" alt="Logo PDF 2">
+            <h3>sports academy</h3>
+          </a>
+        </div>
+        <div class="work-item">
+          <a href="swastikaprints.pdf" target="_blank">
+            <img src="mylogo.png" alt="Logo PDF 3">
+            <h3>printing press</h3>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 🔹 Contact Modal -->
+  <div class="contact-modal" id="contactModal">
+    <div class="modal-content">
+      <span onclick="hideContact()" class="close-btn">&times;</span>
+      <h3>Contact Me</h3>
+      <p>Email: ronikpradhananga@example.com</p>
+      <p>Phone: 9761807988</p>
+    </div>
+  </div>
+
+  <script src="style.js"></script>
+</body>
+</html>
