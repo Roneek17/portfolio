@@ -499,4 +499,49 @@ h1, h2, h3, p {
   margin-top: 40px;   /* space from content */
   border-top: 1px solid #333; /* subtle top line */
 }
+/* --- Remove previous html,body flex rules before adding this --- */
+
+/* Ensure body normal flow (remove the flex layout you had earlier) */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Make sure main has enough bottom space so content isn't hidden behind the fixed footer */
+main, .content, .works-container {
+  /* increase this if you change footer height */
+  padding-bottom: 70px;
+  box-sizing: border-box;
+}
+
+/* Fixed footer visible without scrolling */
+.footer {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 60px;                  /* change height if you want a taller/shorter footer */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;       /* fully transparent background */
+  color: #000;                   /* black text */
+  font-size: 14px;
+  z-index: 9999;                 /* above other elements */
+  border-top: 1px solid rgba(0,0,0,0.08); /* subtle top border (optional) */
+  pointer-events: auto;
+}
+
+/* Mobile: slightly smaller footer height and font */
+@media (max-width: 480px) {
+  .footer {
+    height: 50px;
+    font-size: 13px;
+  }
+  main, .content, .works-container {
+    padding-bottom: 60px; /* match mobile footer height */
+  }
+}
+
 
